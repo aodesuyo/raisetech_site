@@ -1,0 +1,12 @@
+.u-header__text-big{
+    font-size: 2.0rem;
+    font-weight: bold;
+}
+.u-nav__btn{
+    position: fixed;
+    top:-2px;
+    right: 0;
+    @include media_PC{
+        position: static;
+    }
+}

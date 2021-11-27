@@ -1,0 +1,590 @@
+/* =========================================================
+Foundation
+========================================================= */
+* {
+  font-size: 62.5%;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+}
+
+body {
+  background-color: #F4F9FF;
+  color: #121212;
+}
+
+a {
+  text-decoration: none;
+  color: #121212;
+}
+
+li {
+  list-style: none;
+}
+
+/* =========================================================
+Layout
+========================================================= */
+.l-header {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  z-index: 999;
+}
+
+@media only screen and (min-width: 1200px) {
+  .l-header {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+  }
+}
+
+.l-main {
+  padding-top: 50px;
+  position: relative;
+}
+
+.l-main-visual {
+  height: 164px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 766px) {
+  .l-main-visual {
+    height: 650px;
+  }
+}
+
+.l-about {
+  width: 410px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0;
+}
+
+@media only screen and (min-width: 766px) {
+  .l-about {
+    position: absolute;
+    top: 128px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .l-about {
+    position: absolute;
+    top: 148px;
+  }
+}
+
+.l-service {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 70px 0;
+  position: relative;
+}
+
+@media only screen and (min-width: 766px) {
+  .l-service {
+    height: 230px;
+  }
+}
+
+.l-service::after {
+  content: "";
+  display: block;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #121212;
+  position: absolute;
+  z-index: -1;
+}
+
+@media only screen and (min-width: 766px) {
+  .l-service::after {
+    position: absolute;
+    top: -20px;
+    height: 230px;
+    width: 100%;
+    z-index: 0;
+  }
+}
+
+/* =========================================================
+Component
+========================================================= */
+@media only screen and (min-width: 1200px) {
+  .c-nav__outer {
+    display: inline;
+    position: relative;
+  }
+}
+
+.c-nav__cat {
+  display: flex;
+  justify-content: space-between;
+}
+
+.c-nav__cat:hover {
+  background-color: rgba(233, 249, 251, 0.5);
+}
+
+@media only screen and (min-width: 1200px) {
+  .c-nav__cat {
+    display: block;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+  }
+}
+
+.c-nav__cat a {
+  display: block;
+  font-size: 1.4rem;
+  padding: 15px 0 15px 10px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .c-nav__cat a {
+    padding: 15px 10px;
+  }
+}
+
+.c-nav__cat-button {
+  position: relative;
+  display: block;
+  width: 50px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .c-nav__cat-button {
+    position: static;
+    display: none;
+  }
+}
+
+.c-nav__list {
+  display: none;
+}
+
+.c-service-list__icon {
+  display: inline-block;
+  width: 233px;
+  height: 233px;
+  border-radius: 233px;
+  border: solid 3px #121212;
+  position: relative;
+  background-color: white;
+}
+
+.c-service-list__icon-detail {
+  font-size: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.c-service-list__title {
+  font-size: 2.5rem;
+  padding: 16px 0;
+  color: white;
+}
+
+.c-service-list__text {
+  font-size: 1.6rem;
+  padding: 0 25px 40px 25px;
+  color: white;
+}
+
+/* =========================================================
+Project
+========================================================= */
+.p-header {
+  background-color: #fff;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.p-header-title {
+  display: flex;
+  padding: 10px;
+  height: 49px;
+}
+
+@media only screen and (min-width: 1281px) {
+  .p-header-title {
+    height: 70px;
+  }
+}
+
+.p-header__text {
+  display: none;
+}
+
+@media only screen and (min-width: 1281px) {
+  .p-header__text {
+    display: inline-block;
+    padding-left: 20px;
+  }
+}
+
+.p-header__logo {
+  height: calc(50px - 20px);
+  width: auto;
+}
+
+@media only screen and (min-width: 1200px) {
+  .p-header__logo {
+    height: calc(70px - 24px);
+    width: auto;
+  }
+}
+
+.p-header__nav {
+  background-color: #fff;
+}
+
+@media only screen and (min-width: 1200px) {
+  .p-header__nav {
+    position: static;
+    display: flex;
+  }
+}
+
+.p-nav {
+  display: none;
+}
+
+@media only screen and (min-width: 1200px) {
+  .p-nav {
+    display: block;
+  }
+}
+
+.p-nav-wrapper {
+  display: none;
+  width: 100%;
+}
+
+@media only screen and (min-width: 1200px) {
+  .p-nav-wrapper {
+    display: flex;
+    width: auto;
+  }
+  .p-nav-wrapper > li:hover {
+    background-color: #d3f0f6;
+  }
+}
+
+.p-nav__cat-button_current span {
+  font-size: 0;
+  width: 25px;
+  height: 2px;
+  background-size: auto 2px;
+  background-color: #121212;
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 12.5px);
+}
+
+@media only screen and (min-width: 1200px) {
+  .p-nav__cat-button_current span {
+    display: none;
+  }
+}
+
+.p-nav__cat-button_current::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 12.5px);
+  left: calc(50% - 2px);
+  height: 25px;
+  width: 2px;
+  background: #121212;
+  display: block;
+}
+
+@media only screen and (min-width: 1200px) {
+  .p-nav__cat-button_current::before {
+    display: none;
+  }
+}
+
+.p-nav__cat-button_current::before span {
+  font-size: 0;
+  width: 25px;
+  height: 2px;
+  background-size: auto 2px;
+  background-color: #121212;
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 12.5px);
+}
+
+@media only screen and (min-width: 1200px) {
+  .p-nav__cat-button_current::before span {
+    display: none;
+  }
+}
+
+.p-nav__cat-button_open {
+  background-color: #f7f7f7;
+}
+
+.p-nav__cat-button_open span {
+  font-size: 0;
+  width: 25px;
+  height: 2px;
+  background-size: auto 2px;
+  background-color: #121212;
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 12.5px);
+}
+
+@media only screen and (min-width: 1200px) {
+  .p-nav__cat-button_open span {
+    display: none;
+  }
+}
+
+.p-nav__list-active {
+  display: block;
+}
+
+@media only screen and (min-width: 1200px) {
+  .p-nav__list-active {
+    background-color: #e9f9fb;
+    position: absolute;
+    top: 70px;
+    left: 0;
+  }
+}
+
+.p-nav__list-active a {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding: 20px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .p-nav__list-active a {
+    padding: 20px 40px 30px 10px;
+    height: 60px;
+    white-space: nowrap;
+  }
+}
+
+.p-nav__list-active a:hover {
+  background-color: rgba(233, 249, 251, 0.5);
+}
+
+@media only screen and (min-width: 1200px) {
+  .p-nav__list-active a:hover {
+    color: #6fbacd;
+    background-color: white;
+  }
+}
+
+.p-nav__btn {
+  position: fixed;
+  top: -2px;
+  right: 0;
+}
+
+@media only screen and (min-width: 1200px) {
+  .p-nav__btn {
+    position: static;
+  }
+}
+
+.p-nav__hamburger {
+  height: 50px;
+  width: 50px;
+  background-color: white;
+}
+
+@media only screen and (min-width: 1200px) {
+  .p-nav__hamburger {
+    display: block;
+    height: 70px;
+    width: 147px;
+    background-color: #2498B3;
+    color: white;
+  }
+}
+
+.p-nav__hamburger::before, .p-nav__hamburger::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background: #2498B3;
+  left: calc( 50% - 12.5px);
+  display: block;
+  transition: transform 0.2s;
+}
+
+@media only screen and (min-width: 1200px) {
+  .p-nav__hamburger::before, .p-nav__hamburger::after {
+    display: none;
+  }
+}
+
+.p-nav__hamburger::before {
+  top: 15px;
+}
+
+.p-nav__hamburger::after {
+  top: 35px;
+}
+
+.p-nav__hamburger > span {
+  font-size: 0;
+  width: 25px;
+  height: 2px;
+  background-size: auto 2px;
+  background: linear-gradient(to right, #2498B3, #2498B3) repeat-x #2498B3;
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 12.5px);
+}
+
+@media only screen and (min-width: 1200px) {
+  .p-nav__hamburger > span {
+    position: static;
+    font-size: 1.2rem;
+    color: white;
+    width: 100%;
+    height: 20px;
+    display: block;
+  }
+}
+
+.p-nav__hamburger-active {
+  background-color: #2498B3;
+}
+
+.p-nav__hamburger-active::before {
+  transform: rotate(45deg);
+  top: 28px;
+  background-color: #fff;
+}
+
+.p-nav__hamburger-active::after {
+  transform: rotate(-45deg);
+  top: 28px;
+  background-color: #fff;
+}
+
+.p-nav__hamburger-active > span {
+  background: none;
+}
+
+@media only screen and (min-width: 1200px) {
+  .p-nav__hamburger-active {
+    display: none;
+  }
+}
+
+.p-main-bg {
+  background: url(../img/bg-hero3.png);
+  background-attachment: fixed;
+  height: 100%;
+}
+
+.p-main-visual {
+  position: absolute;
+  top: calc(50% + 50px);
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+  max-width: 800px;
+}
+
+@media only screen and (min-width: 766px) {
+  .p-main-visual {
+    top: 50%;
+    max-width: 2000px;
+    max-height: 800px;
+  }
+}
+
+@media only screen and (min-width: 766px) {
+  .p-about {
+    background-color: #fff;
+    border-radius: 10px;
+  }
+}
+
+.p-about__titile {
+  display: none;
+}
+
+@media only screen and (min-width: 766px) {
+  .p-about__titile {
+    display: inline-block;
+    padding: 20px 0;
+  }
+}
+
+.p-about__text {
+  font-size: 1.3rem;
+  line-height: 2.2rem;
+  padding-bottom: 10px;
+}
+
+.p-about__btn {
+  height: 43px;
+  width: 230px;
+  background-color: #2498B3;
+  border-radius: 5px;
+}
+
+.p-about__link {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.p-service-list {
+  z-index: 100;
+}
+
+@media only screen and (min-width: 766px) {
+  .p-service-list {
+    position: absolute;
+    top: -230px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 900px;
+  }
+}
+
+/* =========================================================
+Utility
+========================================================= */
+.u-header__text-big {
+  font-size: 2.0rem;
+  font-weight: bold;
+}
+
+.u-nav__btn {
+  position: fixed;
+  top: -2px;
+  right: 0;
+}
+
+@media only screen and (min-width: 1200px) {
+  .u-nav__btn {
+    position: static;
+  }
+}
+/*# sourceMappingURL=style.css.map */
